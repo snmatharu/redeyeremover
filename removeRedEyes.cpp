@@ -1,8 +1,3 @@
-/**
- Copyright 2017 by Satya Mallick ( Big Vision LLC )
- http://www.learnopencv.com
-**/
-
 #include <opencv2/opencv.hpp>
 
 using namespace std;
@@ -11,10 +6,7 @@ using namespace cv;
 
 void fillHoles(Mat &mask)
 {
-    /* 
-     This hole filling algorithm is decribed in this post
-     https://www.learnopencv.com/filling-holes-in-an-image-using-opencv-python-c/
-     */
+    
      
     Mat maskFloodfill = mask.clone();
     floodFill(maskFloodfill, cv::Point(0,0), Scalar(255));
